@@ -39,53 +39,73 @@
             <div class="form_order">1</div>
             <div class="subheader">Your Basic Information</div>
           </div>
-          <label for="firstName"> First Name </label>
-          <input
-            type="text"
-            name="firstName"
-            id="firstName"
-            title="First Name"
-            placeholder="Jane"
-            required
-          />
-          <label for="lastName"> Last Name </label>
-          <input
-            type="text"
-            name="lastName"
-            id="lastName"
-            title="Last Name"
-            placeholder="Doe"
-            required
-          />
-          <label for="email"> E-mail </label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            title="Email"
-            placeholder="janedoe@example.com"
-            required
-          />
+          <div class="firstName">
+            <label for="firstName"> First Name </label>
+            <input
+              type="text"
+              name="firstName"
+              id="firstName"
+              title="First Name"
+              placeholder="Jane"
+              required
+            />
+          </div>
+          <div class="lastName">
+            <label for="lastName"> Last Name </label>
+            <input
+              type="text"
+              name="lastName"
+              id="lastName"
+              title="Last Name"
+              placeholder="Doe"
+              required
+            />
+          </div>
+          <div class="email">
+            <label for="email"> E-mail </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              title="Email"
+              placeholder="janedoe@example.com"
+              required
+            />
+          </div>
         </div>
         <div id="payment_info">
           <div class="header">
             <div class="form_order">2</div>
             <div class="subheader">Your Payment Information</div>
           </div>
-          <label for="payment"> Credit Card </label>
-          <input
-            type="number"
-            id="payment"
-            name="creditCard"
-            placeholder="Card Number"
-          />
-          <input
-            type="text"
-            id="payment"
-            name="expiryDate"
-            placeholder="MM/YY"
-          />
-          <input type="text" id="payment" name="cvc" placeholder="CVC" />
+          <div class="cardDetails">
+            <label for="payment">Credit Card</label>
+            <div class="creditCard">
+              <input
+                type="text"
+                id="payment"
+                name="creditCard"
+                placeholder="Card Number"
+                required
+              />
+              <div class="other_details">
+                <input
+                  type="text"
+                  id="payment"
+                  name="expiryDate"
+                  placeholder="MM/YY"
+                  required
+                />
+                <input
+                  type="text"
+                  id="payment"
+                  name="cvc"
+                  placeholder="CVC"
+                  required
+                />
+              </div>
+            </div>
+          </div>
         </div>
         <div id="action">
           <button type="submit">Buy WP Pusher</button>
