@@ -158,10 +158,6 @@ div.email {
     margin-inline-start: 49px;
 }
 
-div.cardDetails {
-    width: 483px;
-}
-
 label {
     width: 187px;
     color: #1D2C3C;
@@ -183,8 +179,60 @@ input {
     display: block;
 }
 
-input::placeholder {
-    padding-inline-start: 13px;
+[placeholder*="e" i],
+[placeholder*="m" i]{
+    color: #646E7A;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+div.cardDetails {
+    padding-inline-start: 49px;
+}
+
+div.creditCard {
+    width: 483px;
+    height: 36px;
+    border-radius: 4px;
+    display: inline-block;
+    background: hsla(216, 16%, 94%, 1);
+}
+
+div.creditCard>input {
+    display: inline-block;
+    width: 249px;
+}
+
+div.other_details {
+    display: inline-block;
+    margin-inline-end: 16px;
+}
+
+div.other_details>input {
+    display: inline-block;
+
+    &:first-of-type {
+        width: 154px;
+        margin-inline-end: 15px;
+    }
+
+    &:last-of-type {
+        width: 36px;
+        padding-inline-end: 0px;
+    }
+}
+
+input#payment {
+    border-radius: 0;
+    display: inline;
+    height: 17px;
+    margin-block-start: 9px;
+    margin-block-end: 10px;
+    margin-inline-start: 13px;
+    }
 }
 
 div#payment_info {
