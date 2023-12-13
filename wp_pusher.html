@@ -31,56 +31,62 @@
         </div>
       </div>
     </header>
-    <div class="checkout_container">
+    <div class="container">
       <form action="" method="post">
         <div id="form_header">Checkout</div>
         <div id="basic_info">
-          <div class="header">
+          <div class="section_head">
             <div class="form_order">1</div>
-            <div class="subheader">Your Basic Information</div>
+            <div class="title">Your Basic Information</div>
           </div>
           <div class="firstName">
-            <label for="firstName"> First Name </label>
-            <input
-              type="text"
-              name="firstName"
-              id="firstName"
-              title="First Name"
-              placeholder="Jane"
-              required
-            />
+            <label for="firstName">First Name</label>
+            <div class="input">
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                title="First Name"
+                placeholder="Jane"
+                required
+              />
+            </div>
           </div>
           <div class="lastName">
-            <label for="lastName"> Last Name </label>
-            <input
-              type="text"
-              name="lastName"
-              id="lastName"
-              title="Last Name"
-              placeholder="Doe"
-              required
-            />
+            <label for="lastName">Last Name</label>
+            <div class="input">
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                title="Last Name"
+                placeholder="Doe"
+                required
+              />
+            </div>
           </div>
           <div class="email">
-            <label for="email"> E-mail </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              title="Email"
-              placeholder="janedoe@example.com"
-              required
-            />
+            <label for="email">E-mail</label>
+            <div class="input">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                title="Email"
+                placeholder="janedoe@example.com"
+                required
+              />
+            </div>
           </div>
         </div>
         <div id="payment_info">
-          <div class="header">
+          <div class="section_head">
             <div class="form_order">2</div>
-            <div class="subheader">Your Payment Information</div>
+            <div class="title">Your Payment Information</div>
           </div>
-          <div class="cardDetails">
+          <div class="credit-card">
             <label for="payment">Credit Card</label>
-            <div class="creditCard">
+            <div class="cardDetails">
               <input
                 type="text"
                 id="payment"

@@ -58,7 +58,7 @@ button#nav {
     padding-block-end: 10px;
 }
 
-.checkout_container {
+.container {
     margin: 0 auto;
     border-radius: 6px;
     background: #FFF;
@@ -66,30 +66,6 @@ button#nav {
     width: 892px;
     height: 795px;
     position: relative;
-}
-
-form {
-    width: 580px;
-    padding-block-start: 41px;
-}
-
-.form_order {
-    border: 2px solid #548BC5;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    padding-inline: 7px;
-    padding-block: 4px;
-    color: #548BC5;
-    text-align: center;
-    font-family: Lato;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: -0.142px;
-    display: inline-block;
-    margin-block-end: 4px;
 }
 
 div#form_header {
@@ -109,24 +85,46 @@ div#form_header {
     line-height: normal;
 }
 
+form {
+    width: 580px;
+    padding-block-start: 41px;
+}
+
 div#basic_info {
     border-block-start: 2px solid #F5F7FA;
     height: 253px;
+    padding-inline-start: 49px;
 }
 
-.header {
+.form_order {
+    border: 2px solid #548BC5;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding-inline: 5px;
+    padding-block-start: 2px;
+    padding-block-end: 5px;
+    color: #548BC5;
+    text-align: center;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.142px;
+    display: inline-block;
+}
+
+.section_head {
     width: 264px;
-    height: 38px;
-    margin-inline-start: 49px;
+    height: 34px;
     margin-block-start: 34px;
     margin-block-end: 9px;
 }
 
-.subheader {
+.title {
     width: 220px;
     height: 32px;
-    padding-inline-start: 0px;
-    padding-block-start: 0px;
     color: #1D2C3C;
     font-family: Lato;
     font-size: 18px;
@@ -136,108 +134,115 @@ div#basic_info {
     letter-spacing: -0.16px;
     display: inline-block;
     margin-inline-start: 10px;
-    margin-block-start: 2px;
+    margin-block: 0 auto;
+    padding-block: 7px;
 }
 
-div.firstName {
+.firstName {
     width: 227px;
-    margin-inline-start: 49px;
-    margin-block-end: 15px;
+    height: 60px;
     display: inline-block;
 }
 
-div.lastName {
-    width: 226px;
+.lastName {
+    width: 227px;
+    height: 60px;
     display: inline-block;
     margin-inline-start: 30px;
 }
 
-div.email {
+.email {
     width: 370px;
+    height: 60px;
     display: inline-block;
-    margin-inline-start: 49px;
+    margin-block-start: 15px;
 }
 
 label {
     width: 187px;
+    display: inline-block;
     color: #1D2C3C;
     font-family: Lato;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    display: block;
-    margin-block-end: 7px;
+}
+
+.input {
+    height: 36px;
+    border-radius: 4px;
+    background: hsla(216, 16%, 94%, 1);
+    margin-block-start: 7px;
+    padding-inline-start: 13px;
+    padding-block-start: 9px;
+    padding-block-end: 10px;
 }
 
 input {
-    width: 100%;
-    height: 36px;
-    border-radius: 4px;
+    min-height: 17px;
     background: hsla(216, 16%, 94%, 1);
-    border: 0;
-    display: block;
-}
-
-[placeholder*="e" i],
-[placeholder*="m" i]{
-    color: #646E7A;
-    font-family: Lato;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
     line-height: normal;
-}
+    border: 0;
+    padding: 0;
+    outline: none;
 
-div.cardDetails {
-    padding-inline-start: 49px;
-}
-
-div.creditCard {
-    width: 483px;
-    height: 36px;
-    border-radius: 4px;
-    display: inline-block;
-    background: hsla(216, 16%, 94%, 1);
-}
-
-div.creditCard>input {
-    display: inline-block;
-    width: 249px;
-}
-
-div.other_details {
-    display: inline-block;
-    margin-inline-end: 16px;
-}
-
-div.other_details>input {
-    display: inline-block;
-
-    &:first-of-type {
-        width: 154px;
-        margin-inline-end: 15px;
-    }
-
-    &:last-of-type {
-        width: 36px;
-        padding-inline-end: 0px;
-    }
-}
-
-input#payment {
-    border-radius: 0;
-    display: inline;
-    height: 17px;
-    margin-block-start: 9px;
-    margin-block-end: 10px;
-    margin-inline-start: 13px;
+    &::placeholder {
+        min-height: 17px;
+        color: hsla(213, 10%, 44%, 1);
+        font-family: Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
     }
 }
 
 div#payment_info {
     border-block-start: 2px solid #F5F7FA;
     height: 185px;
+    padding-inline-start: 49px;
+    padding-inline-end: 48px;
+}
+
+.creditCard {
+    height: 60px;
+    display: inline-block;
+}
+
+.cardDetails {
+    height: 36px;
+    border-radius: 4px;
+    background: hsla(216, 16%, 94%, 1);
+    margin-block-start: 7px;
+    padding-inline-start: 13px;
+    /* padding-inline-end: 16px; */
+    padding-block-start: 9px;
+    padding-block-end: 10px;
+
+    &>input {
+        width: 154px;
+    }
+}
+
+.other_details {
+    display: inline-block;
+    align-items: right;
+    margin-inline-end: 16px;
+
+
+    &>input:first-child {
+        width: 154px;
+        padding-inline-start: 95px;
+    }
+
+    &>input:last-child {
+        width: 36px;
+
+        &[placeholder] {
+            text-align: right;
+        }
+    }
 }
 
 div#action {
