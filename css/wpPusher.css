@@ -6,10 +6,10 @@
 
   
 body {
-    min-width: 1440px;
-    min-height: 1170px;
+    max-width: 1440px;
+    max-height: 1170px;
     margin: 0;
-    background: #F5F8FA;
+    background: hsla(0, 0%, 100%, 1);
 }
 
 div#nav {
@@ -66,7 +66,7 @@ button#nav {
 .container {
     margin: 0 auto;
     border-radius: 6px;
-    background: #FFF;
+    background: hsla(0, 0%, 100%, 1);
     box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05), 0px 15px 35px 0px rgba(43, 64, 78, 0.10);
     max-width: 892px;
     max-height: 795px;
@@ -81,9 +81,8 @@ div#form_header {
     margin-inline-start: 48px;
     margin-inline-end: 371px;
     margin-block-end: 24px;
-    color: #1D2C3C;
+    color: hsla(211, 35%, 17%, 1);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Lato;
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
@@ -103,16 +102,15 @@ div#basic_info {
 }
 
 .form_order {
-    border: 2px solid #548BC5;
+    border: 2px solid hsla(211, 49%, 55%, 1);
     width: 30px;
     height: 30px;
     border-radius: 50%;
     padding-inline: 5px;
     padding-block-start: 2px;
     padding-block-end: 5px;
-    color: #548BC5;
+    color: hsla(211, 49%, 55%, 1);
     text-align: center;
-    font-family: Lato;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -131,8 +129,7 @@ div#basic_info {
 .title {
     width: 220px;
     height: 32px;
-    color: #1D2C3C;
-    font-family: Lato;
+    color: hsla(211, 35%, 17%, 1);
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -172,8 +169,7 @@ div#basic_info {
 label {
     width: 187px;
     display: inline-block;
-    color: #1D2C3C;
-    font-family: Lato;
+    color: hsla(211, 35%, 17%, 1);
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -201,7 +197,6 @@ input {
     &::placeholder {
         min-height: 17px;
         color: hsla(213, 10%, 44%, 1);
-        font-family: Lato;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -210,7 +205,7 @@ input {
 }
 
 div#payment_info {
-    border-block-start: 2px solid #F5F7FA;
+    border-block-start: 2px solid hsla(216, 33%, 97%, 1);
     height: 185px;
     padding-inline-start: 49px;
     padding-inline-end: 48px;
@@ -262,7 +257,7 @@ div#payment_info {
 }
 
 div#action {
-    border-block-start: 2px solid #F5F7FA;
+    border-block-start: 2px solid hsla(216, 33%, 97%, 1);
     height: 232px;
     width: 580px;
     padding-inline-start: 49px;
@@ -276,9 +271,8 @@ div#action {
         border: 0;
         border-radius: 5px;
         background: hsla(173, 96%, 28%, 1);
-        color: #FFF;
+        color: hsla(0, 0%, 100%, 1);
         text-align: center;
-        font-family: Lato;
         font-size: 18px;
         font-style: normal;
         font-weight: 700;
@@ -296,9 +290,20 @@ div#action {
             align-items: center;
             margin-block-start: 23px;
             margin-block-end: 34px;
+            color: hsla(213, 10%, 44%, 1);
 
             &>img {
                 padding-inline-end: 10px;
+            }
+
+            &>span {
+                color: hsla(211, 35%, 17%, 1);
+                font-weight: 700;
+            }
+
+            &>a:-webkit-any-link {
+                color: hsla(213, 10%, 44%, 1);
+                text-decoration: underline hsla(213, 10%, 44%, 1);
             }
         }
     }
@@ -315,7 +320,7 @@ div#product_info {
     width: 312px;
     max-height: 795px;
     border-radius: 0px 6px 6px 0px;
-    background: #1179BF;
+    background: hsla(204, 84%, 41%, 1);
     position: absolute;
     top: 0;
     left: 580px;
@@ -332,7 +337,6 @@ div#product_info {
 
     &>#product {
         color: hsla(0, 0%, 100%, 1);
-        font-family: Lato;
         font-size: 20px;
         font-style: normal;
         font-weight: 700;
@@ -343,7 +347,6 @@ div#product_info {
 
     &>#offer {
         color: hsla(0, 0%, 100%, 1);
-        font-family: Lato;
         font-size: 60px;
         font-style: normal;
         font-weight: 300;
@@ -355,7 +358,6 @@ div#product_info {
 
         &>sup {
             color: hsla(0, 0%, 100%, 1);
-            font-family: Lato;
             font-size: 24px;
             font-style: normal;
             font-weight: 700;
@@ -364,8 +366,8 @@ div#product_info {
         }
 
         &>sub {
+            vertical-align: unset;
             color: hsla(0, 0%, 100%, 1);
-            font-family: Lato;
             font-size: 18px;
             font-style: normal;
             font-weight: 700;
@@ -376,7 +378,6 @@ div#product_info {
 
     &>#renewal {
         color: hsla(0, 0%, 100%, 1);
-        font-family: Lato;
         font-size: 16px;
         font-style: italic;
         font-weight: 400;
@@ -405,7 +406,7 @@ ul{
     &>li {
         display: flex;
         align-items: center;
-        color: #FFF;
+        color: hsla(0, 0%, 100%, 1);
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -427,7 +428,7 @@ p.alternative_plan {
     flex-wrap: wrap;
     width: min-content;
     min-height: 50px;
-    color: #FFF;
+    color: hsla(0, 0%, 100%, 1);
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -445,7 +446,7 @@ p.alternative_plan {
     &>a {
         width: max-content;
         display: inline-block;
-        color: #FFF;
+        color: hsla(0, 0%, 100%, 1);
         font-weight: 700;
 
         &:-webkit-any-link {
@@ -468,21 +469,26 @@ p.alternative_plan {
 }
 
 .quote {
-    display: flex;
-    flex-wrap: wrap;
-    width: 227px;
-    color: #FFF;
+    color: hsla(0, 0%, 100%, 1);
     font-size: 18px;
     font-style: italic;
     font-weight: 400;
     line-height: 24px; /* 133.333% */
     letter-spacing: -0.009px;
 
+    &>span {
+        font-weight: 700;
+    }
+
     &>#customer {
         font-style: normal;
         display: flex;
         align-items: center;
         margin-block-start: 17px;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: -0.008px;
+        line-height: normal;
 
         &>img {
             border-radius: 50%;
@@ -497,11 +503,14 @@ footer {
     margin: 0 auto;
     color: hsla(200, 6%, 41%, 1);
     text-align: center;
-    font-family: Lato;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     margin-block-start: 33px;
     margin-block-end: 139px;
+
+    &>span {
+        color: hsla(200, 49%, 38%, 1);
+    }
 }
