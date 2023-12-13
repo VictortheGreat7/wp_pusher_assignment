@@ -61,6 +61,7 @@ button#nav {
     padding-inline-end: 18px;
     padding-block-start: 9px;
     padding-block-end: 10px;
+    cursor: pointer;
 }
 
 .container {
@@ -279,6 +280,7 @@ div#action {
         line-height: normal;
         letter-spacing: -0.396px;
         padding: 0;
+        cursor: pointer;
     }
 
     &>#form_footer {
