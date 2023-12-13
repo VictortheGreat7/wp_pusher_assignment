@@ -2,10 +2,13 @@
     font-family: 'Lato', sans-serif;
     box-sizing: border-box;
 }
+
+
   
 body {
-    max-width: 1440px;
-    max-height: 1170px;
+    min-width: 1440px;
+    min-height: 1170px;
+    margin: 0;
     background: #F5F8FA;
 }
 
@@ -23,6 +26,7 @@ img#nav {
 }
 
 div#breadcrumbs {
+    display: flex;
     margin-block-start: 28px;
     margin-block-end: 31px;
 }
@@ -32,11 +36,12 @@ div#breadcrumbs>a {
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
-    line-height: 17px;
+    line-height: normal;
     letter-spacing: -0.01px;
-    padding-inline-end: 44px;
-    padding-block-start: 11px;
-    padding-block-end: 12px;
+    text-align: center;
+    margin-inline-end: 44px;
+    margin-block-start: 11px;
+    margin-block-end: 12px;
     text-decoration: none;
 }
 
@@ -63,8 +68,8 @@ button#nav {
     border-radius: 6px;
     background: #FFF;
     box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05), 0px 15px 35px 0px rgba(43, 64, 78, 0.10);
-    width: 892px;
-    height: 795px;
+    max-width: 892px;
+    max-height: 795px;
     position: relative;
 }
 
@@ -94,6 +99,7 @@ div#basic_info {
     border-block-start: 2px solid #F5F7FA;
     height: 253px;
     padding-inline-start: 49px;
+    padding-inline-end: 48px;
 }
 
 .form_order {
@@ -138,6 +144,11 @@ div#basic_info {
     padding-block: 7px;
 }
 
+.name {
+    display: flex;
+    align-items: center;
+}
+
 .firstName {
     width: 227px;
     height: 60px;
@@ -145,7 +156,7 @@ div#basic_info {
 }
 
 .lastName {
-    width: 227px;
+    width: 226px;
     height: 60px;
     display: inline-block;
     margin-inline-start: 30px;
@@ -211,29 +222,34 @@ div#payment_info {
 }
 
 .cardDetails {
+    width: 483px;
     height: 36px;
     border-radius: 4px;
     background: hsla(216, 16%, 94%, 1);
     margin-block-start: 7px;
     padding-inline-start: 13px;
-    /* padding-inline-end: 16px; */
+    padding-inline-end: 16px;
     padding-block-start: 9px;
     padding-block-end: 10px;
+    align-items: center;
+    display: flex;
 
     &>input {
         width: 154px;
+        margin-inline-end: 95px;
     }
 }
 
 .other_details {
-    display: inline-block;
-    align-items: right;
-    margin-inline-end: 16px;
-
+    display: flex;
 
     &>input:first-child {
         width: 154px;
-        padding-inline-start: 95px;
+        margin-inline-end: 15px;
+
+        &[placeholder] {
+            text-align: right;
+        }
     }
 
     &>input:last-child {
@@ -248,11 +264,56 @@ div#payment_info {
 div#action {
     border-block-start: 2px solid #F5F7FA;
     height: 232px;
+    width: 580px;
+    padding-inline-start: 49px;
+    padding-inline-end: 48px;
+    padding-block-start: 39px;
+    padding-block-end: 46.9px;
+
+    &>button {
+        width: 483px;
+        height: 52px;
+        border: 0;
+        border-radius: 5px;
+        background: hsla(173, 96%, 28%, 1);
+        color: #FFF;
+        text-align: center;
+        font-family: Lato;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.396px;
+        padding: 0;
+    }
+
+    &>#form_footer {
+        width: max-content;
+        margin: 0 auto;
+
+        &>p {
+            display: flex;
+            align-items: center;
+            margin-block-start: 23px;
+            margin-block-end: 34px;
+
+            &>img {
+                padding-inline-end: 10px;
+            }
+        }
+    }
+}
+
+#stripe {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    height: 21px;
 }
 
 div#product_info {
     width: 312px;
-    height: 795px;
+    max-height: 795px;
     border-radius: 0px 6px 6px 0px;
     background: #1179BF;
     position: absolute;
@@ -260,4 +321,110 @@ div#product_info {
     left: 580px;
     bottom: 0;
     right: 0;
+}
+
+.plan {
+    max-width: 231px;
+    margin-block-start: 42px;
+    margin-block-end: 36px;
+    margin-inline-start: 44px;
+    margin-inline-end: 37px;
+
+    &>#product {
+        color: hsla(0, 0%, 100%, 1);
+        font-family: Lato;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.01px;
+        margin: 0;
+    }
+
+    &>#offer {
+        color: hsla(0, 0%, 100%, 1);
+        font-family: Lato;
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        letter-spacing: -0.015px;
+        display: inline-block;
+        margin-block-start: 5px;
+        margin-block-end: 3px;
+
+        &>sup {
+            color: hsla(0, 0%, 100%, 1);
+            font-family: Lato;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: -0.015px;
+        }
+
+        &>sub {
+            color: hsla(0, 0%, 100%, 1);
+            font-family: Lato;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: -0.015px;
+        }
+    }
+
+    &>#renewal {
+        color: hsla(0, 0%, 100%, 1);
+        font-family: Lato;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        letter-spacing: -0.008px;
+        max-width: 200px;
+        min-height: 48px;
+        padding-inline-end: 29px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+}
+
+ul{
+    list-style-type: none;
+
+    &>li {
+        display: flex;
+        align-items: center;
+        color: #FFF;
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        letter-spacing: -0.008px;
+
+        &:not(:nth-last-of-type(1)) {
+            margin-block-end: 16px;
+        }
+
+        &>img {
+            margin-inline-end: 11px;
+        }
+    }
+}
+
+footer {
+    width: 867px;
+    margin: 0 auto;
+    color: hsla(200, 6%, 41%, 1);
+    text-align: center;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-block-start: 33px;
+    margin-block-end: 139px;
 }

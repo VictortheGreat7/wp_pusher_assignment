@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
     <title>WP Pusher</title>
@@ -39,30 +39,32 @@
             <div class="form_order">1</div>
             <div class="title">Your Basic Information</div>
           </div>
-          <div class="firstName">
-            <label for="firstName">First Name</label>
-            <div class="input">
-              <input
-                type="text"
-                name="firstName"
-                id="firstName"
-                title="First Name"
-                placeholder="Jane"
-                required
-              />
+          <div class="name">
+            <div class="firstName">
+              <label for="firstName">First Name</label>
+              <div class="input">
+                <input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  title="First Name"
+                  placeholder="Jane"
+                  required
+                />
+              </div>
             </div>
-          </div>
-          <div class="lastName">
-            <label for="lastName">Last Name</label>
-            <div class="input">
-              <input
-                type="text"
-                name="lastName"
-                id="lastName"
-                title="Last Name"
-                placeholder="Doe"
-                required
-              />
+            <div class="lastName">
+              <label for="lastName">Last Name</label>
+              <div class="input">
+                <input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  title="Last Name"
+                  placeholder="Doe"
+                  required
+                />
+              </div>
             </div>
           </div>
           <div class="email">
@@ -115,19 +117,25 @@
         </div>
         <div id="action">
           <button type="submit">Buy WP Pusher</button>
-          <div id="support">
-            <span>Need any help?</span>
-            <span> Don't hesitate to <a href="#">contact support</a> </span>
+          <div id="form_footer">
+            <p>
+              <img src="assets/images/mask.svg" alt="" />Need any help? Don't
+              hesitate to&nbsp;<a href="#">contact support!</a>
+            </p>
+            <div class="stripe">
+              <span id="stripe"
+                ><img src="assets/images/powered-by-stripe.svg" alt="stripe"
+              /></span>
+            </div>
           </div>
-          <img src="assets/images/powered-by-stripe.svg" alt="" id="stripe" />
         </div>
       </form>
       <div id="product_info">
         <div id="pricing_info">
-          <div class="price">
-            <span>Freelancer</span>
-            <sup>$</sup>99<sub>/year</sub>
-            <span id="renewal">Automatically renews after 1 year</span>
+          <div class="plan">
+            <p id="product">Freelancer</p>
+            <p id="offer"><sup>$</sup>99<sub>/year</sub></p>
+            <p id="renewal">Automatically renews after 1 year</p>
           </div>
           <div class="product_details">
             <ul>
