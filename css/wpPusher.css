@@ -1,16 +1,31 @@
+/* Global Styles */
+
 * {
     font-family: 'Lato', sans-serif;
     box-sizing: border-box;
 }
 
 
-  
+/* Page Layout */
+
 body {
     max-width: 1440px;
     max-height: 1170px;
     margin: 0;
     background: hsla(0, 0%, 100%, 1);
 }
+
+.container {
+    margin: 0 auto;
+    border-radius: 6px;
+    background: hsla(0, 0%, 100%, 1);
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05), 0px 15px 35px 0px rgba(43, 64, 78, 0.10);
+    max-width: 892px;
+    max-height: 795px;
+    position: relative;
+}
+
+/* Navigation */
 
 div#nav {
     display: flex;
@@ -64,15 +79,7 @@ button#nav {
     cursor: pointer;
 }
 
-.container {
-    margin: 0 auto;
-    border-radius: 6px;
-    background: hsla(0, 0%, 100%, 1);
-    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05), 0px 15px 35px 0px rgba(43, 64, 78, 0.10);
-    max-width: 892px;
-    max-height: 795px;
-    position: relative;
-}
+/* Main Content */
 
 div#form_header {
     width: 161px;
@@ -283,6 +290,10 @@ div#action {
         letter-spacing: -0.396px;
         padding: 0;
         cursor: pointer;
+
+        &:hover {
+            background: hsla(173, 96%, 28%, 0.9);
+        }
     }
 
     &>#form_footer {
@@ -501,6 +512,8 @@ p.alternative_plan {
         }
     }
 }
+
+/* Footer */
 
 footer {
     width: 867px;
