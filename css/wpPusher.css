@@ -10,6 +10,7 @@
 
 body {
     max-width: 1440px;
+    min-width: 1024px;
     max-height: 1170px;
     margin: 0;
     background: hsla(0, 0%, 100%, 1);
@@ -25,9 +26,9 @@ body {
     position: relative;
 }
 
-/* Navigation */
+/* Header and Navigation */
 
-div#nav {
+div.nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -36,7 +37,7 @@ div#nav {
     border-bottom: 2px solid hsla(204, 18%, 90%, 1);
 }
 
-img#nav {
+img.nav {
     margin-block: 30px;
 }
 
@@ -44,9 +45,14 @@ div#breadcrumbs {
     display: flex;
     margin-block-start: 28px;
     margin-block-end: 31px;
+    height: 40px;
+    align-items: center;
+    gap: 44px;
 }
 
 div#breadcrumbs>a {
+    display: flex;
+    height: 17px;
     color: hsla(211, 35%, 17%, 1);
     font-size: 14px;
     font-style: normal;
@@ -54,13 +60,27 @@ div#breadcrumbs>a {
     line-height: normal;
     letter-spacing: -0.01px;
     text-align: center;
-    margin-inline-end: 44px;
-    margin-block-start: 11px;
-    margin-block-end: 12px;
     text-decoration: none;
+    
+    &:first-child {
+        width: 65px;
+    }
+    
+    &:nth-child(2) {
+        width: 71px;
+        letter-spacing: -0.02px;
+    }
+
+    &:nth-child(3) {
+        width: 43px;
+    }
+
+    &:nth-child(4) {
+        width: 30px;
+    }
 }
 
-button#nav {
+button.nav {
     width: 91px;
     height: 40px;
     border-radius: 6px;
@@ -102,7 +122,9 @@ form {
     padding-block-start: 41px;
 }
 
-div#basic_info {
+/* Personal Information Section */
+
+div#personal_info {
     border-block-start: 2px solid hsla(216, 33%, 97%, 1);
     height: 253px;
     padding-inline-start: 49px;
@@ -213,6 +235,8 @@ input {
     }
 }
 
+/* Payment Section */
+
 div#payment_info {
     border-block-start: 2px solid hsla(216, 33%, 97%, 1);
     height: 185px;
@@ -265,6 +289,8 @@ div#payment_info {
         text-align: right;
     }
 }
+
+/* Button Section */
 
 div#action {
     border-block-start: 2px solid hsla(216, 33%, 97%, 1);
@@ -319,6 +345,11 @@ div#action {
             &>a:-webkit-any-link {
                 color: hsla(213, 10%, 44%, 1);
                 text-decoration: underline hsla(213, 10%, 44%, 1);
+                
+                &:hover {
+                    color: hsla(213, 10%, 44%, 0.7);
+                     text-decoration: underline hsla(213, 10%, 44%, 0.7);
+                 }
             }
         }
     }
@@ -330,6 +361,8 @@ div#action {
     width: fit-content;
     height: 21px;
 }
+
+/* Product Details Section */
 
 div#product_info {
     width: 312px;
@@ -463,9 +496,17 @@ p.alternative_plan {
         display: inline-block;
         color: hsla(0, 0%, 100%, 1);
         font-weight: 700;
+        
+        &:hover {
+            color: hsla(0, 0%, 100%, 0.7);
+        }
 
         &:-webkit-any-link {
             text-decoration: underline hsla(189, 100%, 86%, 0.5036);
+            
+            &:hover {
+                text-decoration: underline hsla(189, 100%, 86%, 0.3036);
+            }
         }
 
         &>span {
